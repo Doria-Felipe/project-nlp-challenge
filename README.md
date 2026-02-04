@@ -37,3 +37,35 @@ Use the techniques you have learned and the common packages to process this data
 2. **Predictions:** A csv file in the same format as `validation_data.csv` but with the predicted labels (0 or 1)
 3. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
 4. **Presentation:** You will present your model in a 10-minute presentation. Your teacher will provide further instructions.
+
+## 🧹 Jupyter Notebook Hygiene (Required)
+
+This project uses **nbstripout** to ensure that **Jupyter notebooks are always committed without outputs or execution metadata**.
+
+This keeps:
+- Git history clean
+- Pull requests readable
+- Merge conflicts to a minimum
+
+Notebook outputs should **never** appear in commits or pull requests.
+
+---
+
+### One-time setup (per developer machine)
+
+Install `nbstripout` and register it with Git:
+
+```bash
+pip install nbstripout
+nbstripout --install
+```
+
+This repository includes a .gitattributes file at the root level that applies nbstripout to all Jupyter notebooks.
+
+```
+*.ipynb filter=nbstripout
+```
+
+> **Note:** Your first commit after running a notebook may fail.
+> This is expected — `nbstripout` has cleaned the file.
+> Simply run `git add .` and commit again.
