@@ -2,41 +2,33 @@
 
 # PROJECT | Natural Language Processing Challenge
 
-## Introduction
+Use NLP to identify whether a news headline is real or fake news.
 
-Learning how to process text is a skill required for Data Scientists/AI Engineers. 
+[Task Descriptions and Project Instructions](hhttps://github.com/ironhack-labs/project-nlp-challenge)
 
-In this project, you will put these skills into practice to identify whether a news headline is real or fake news.
+## Project Results 
+In this project, we processed the dataset `training_data_lowercase.csv` that contains labels and texts and explored different classifiers results:
+- Built a workflow of NLP preprocessing.
+- Trained 50+ models, our best model was the Lemm. NN-embedding with ~ 94% accuracy and ~97% gini.
+- Scored the dataset `testing_data_lowercase.csv` with the BOW Logistic regression with ~93% accuracy and ~96% gini resulting on the file `predictions.csv`.
 
-## Project Overview
 
-In the file `dataset/data.csv`, you will find a dataset containing news articles with the following columns:
+## Repository Folders and Files
 
-- **`label`**: 0 if the news is fake, 1 if the news is real.
-- **`title`**: The headline of the news article.
-- **`text`**: The full content of the article.
-- **`subject`**: The category or topic of the news.
-- **`date`**: The publication date of the article.
+Here is a short description of the folder and files available on the repository.
 
-Your goal is to build a classifier that is able to distinguish between the two.
+### Documents
+**Group 2 - Natural Language Processing Challenge - Presentation Slides**  
+G2_NLP_Presentation.ppt
 
-Once you have a classifier built, then use it to predict the labels for `dataset/validation_data.csv`. Generate a new file
-where the label `2` has been replaced by `0` (fake) or `1` (real) according to your model. Please respect the original file format, 
-do not include extra columns, and respect the column separator. 
+### dataset
 
-Please ensure to split the `data.csv` into **training** and **test** datasets before using it for model training or evaluation.
+- **training_data_lowercase.csv:** The training dataset for our model.
+- **testing_data_lowercase.csv:** The unlabeled dataset for validation.
+- **predictions.csv:** The predictions. It is composed of a .csv file separated with `\t` and the text from `testing_data_lowercase.csv`. The first row is the labels our model predicted and the second is the original text. There are no headers.
 
-## Guidance
-
-Like in a real life scenario, you are able to make your own choices and text treatment.
-Use the techniques you have learned and the common packages to process this data and classify the text.
-
-## Deliverables
-
-1. **Python Code:** Provide well-documented Python code that conducts the analysis.
-2. **Predictions:** A csv file in the same format as `validation_data.csv` but with the predicted labels (0 or 1)
-3. **Accuracy estimation:** Provide the teacher with your estimation of how your model will perform.
-4. **Presentation:** You will present your model in a 10-minute presentation. Your teacher will provide further instructions.
+### Notebooks  
+- **Project3_G2_NLP**: Our workflow where we worked to obtain each model.
 
 ## 🧹 Jupyter Notebook Hygiene (Required)
 
